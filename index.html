@@ -278,11 +278,11 @@
           </li>
           <li class="flex items-center gap-3 py-3">
             <span class="step-mark grid size-7 shrink-0 place-items-center rounded-full" aria-hidden="true">2</span>
-            <span><strong class="block text-sm">Choose a feeling</strong><span class="muted text-sm">Go with your first reaction.</span></span>
+            <span><strong class="block text-sm">Choose a feeling</strong></span>
           </li>
           <li class="flex items-center gap-3 py-3">
             <span class="step-mark grid size-7 shrink-0 place-items-center rounded-full" aria-hidden="true">3</span>
-            <span><strong class="block text-sm">Read and compare</strong><span class="muted text-sm">Follow the movement frame by frame.</span></span>
+            <span><strong class="block text-sm">Read and compare</strong></span>
           </li>
         </ol>
       </div>
@@ -359,7 +359,6 @@
     <section id="analysis" class="wrap analysis-section pb-11 md:pb-14" aria-labelledby="analysis-title">
       <div class="mb-5">
         <h2 id="analysis-title" class="section-title serif">Read the movement</h2>
-        <p class="muted mt-3 max-w-2xl leading-relaxed">A frame by frame analysis</p>
       </div>
 
       <div class="frame-reader rounded-[1.5rem]" id="frame-reader">
@@ -375,7 +374,7 @@
 
     <section id="compare" class="comparison wrap mb-10 rounded-[1.5rem] px-5 py-7 md:px-8 md:py-9" aria-labelledby="compare-title">
       <h2 id="compare-title" class="section-title serif">How is confidence sold?</h2>
-      <p class="compare-lead mt-3">The two ads give confidence a different source. Gap shows what it feels like to have a place in a group and bring your own style to it. Kenzo shows what it feels like to decide how to act for yourself in a setting that expects you to conform.</p>
+      <p class="compare-lead mt-3">Gap shows what it feels like to have a place in a group and bring your own style to it. Kenzo shows what it feels like to decide how to act for yourself in a setting that expects you to conform.</p>
       <div id="compare-stills" class="compare-stills mt-6 grid gap-5 md:grid-cols-2" aria-label="Paired overhead frames from Kenzo and Gap"></div>
       <div class="compare-text mt-7">
         <details class="comparison-item" name="confidence-comparison" open>
@@ -432,7 +431,6 @@
         <div class="frame-overview">
           <div class="min-w-0" data-frame></div>
           <div class="frame-intro">
-            <p class="eyebrow mb-2" data-case-name></p>
             <h3 class="serif" data-title></h3>
             <h4 class="eyebrow">Movement and framing</h4>
             <p data-observe></p>
@@ -733,7 +731,6 @@
   </script>
   <script>
     const frames = JSON.parse(document.getElementById("frame-data").textContent);
-    const names = { kenzo: "Kenzo World", gap: "Better in Denim" };
     const references = {
       dunagan: ["Dunagan (2007)", "#source-dunagan"],
       daloia: ["D’Aloia (2020)", "#source-daloia"],
@@ -805,8 +802,6 @@
       const interpretation = panel.querySelector("[data-interpret]");
       const consumer = panel.querySelector("[data-consumer]");
       let index = 0;
-
-      panel.querySelector("[data-case-name]").textContent = names[ad];
 
       const jumpButtons = cases.map((item, number) => {
         const jump = document.createElement("button");
